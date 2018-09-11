@@ -8,15 +8,66 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+    <style type="text/css">
+    	html,body{
+    		font-family: 'Lato', sans-serif;
+    		color: rgba(0,0,0,0.8);
+    	}
+    	a:hover{
+    		text-decoration: none;
+    	}
+    </style>
+
   </head>
   <body>
-  	<div class="container">
-  		<div class="row-fluid py-5 text-center">
-		    <h1>G-Apedia</h1>
-		    <h2>Integrity Meter</h2>
-			<p>
-			  The time is now: <%= Time.now %>
-			</p>
+  	<div class="container py-3">
+  		<div class="row-fluid text-center">
+		    <div class="col-12">
+		    	<h1 class="display-3">G-Apedia</h1>
+		    	<h2>Integrity Meter</h2>
+	    	</div>
+	    	<br/>
+		    <div class="col-8 offset-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
+		    	<img class="img-fluid" src="https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Wikipedia-logo-v2.svg/1122px-Wikipedia-logo-v2.svg.png"/>
+		    </div>
+		    <div class="col-12">
+	    		<span class="display-1"><%= @accuracy %>%</span>
+	    		<br/>
+		    	<span>
+		    		Has shown us the path to the truth
+		    		<span class="text-success"><%= @vote.upvote %></span>
+		    		times
+	    		</span>
+	    		<br/>
+	    		<span>
+	    			He has steered us wrong
+		    		<span class="text-danger"><%= @vote.downvote %></span>
+		    		times
+		    	</span>
+		    	<br/>
+	    		<span>
+	    			For a grand total of
+	    			<span class="text-primary"><%= @total %></span>
+	    			debates/arguments
+		    	</span>
+		    </div>
+		    <div class="col-12 pt-2 d-none d-sm-block">	    	
+		    	<a class="btn btn-lg btn-outline-success m-1" data-method="put" href="vote/1/upvote">Thanks G! 😃</a>
+		    	<a class="btn btn-lg btn-outline-danger m-1" data-method="put" href="vote/1/downvote">Fake News! 😡</a>
+		    </div>
+		    <div class="col-12 pt-2 d-block d-sm-none">	    	
+		    	<a class="btn btn-outline-success m-1" data-method="put" href="vote/1/upvote">Thanks G! 😃</a>
+		    	<a class="btn btn-outline-danger m-1" data-method="put" href="vote/1/downvote">Fake News! 😡</a>
+		    </div>
+		    <br/>
+		    <div class="col-12 text-right">
+		    	<small>
+		    		🛠 with ❤️ by <a href="https://1social.me/kcamel" target="_blank">kcamel</a>🐫
+		    	</small>
+		    </div>
 		</div>
 	</div>
 
