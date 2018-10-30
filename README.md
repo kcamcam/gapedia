@@ -1,24 +1,12 @@
-# README
+# G-apedia 
+This website keeps track of a friends accuracy of everyday knowledge. It is dead simple rails app built with rails, postgresql, and deployed on heroku.	
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Website: [gapedia.herokuapp.com](https://gapedia.herokuapp.com)
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Getting started
+```bash
+$ git pull
+$ bundle install
+$ export DATABASE_URL=url-link-for-database-with-credentials
+$ rails s
+```
