@@ -10,3 +10,6 @@ $ bundle install
 $ export DATABASE_URL=url-link-for-database-with-credentials
 $ rails s
 ```
+
+### Note
+The website is hosted on a free [Heroku Dyno](https://devcenter.heroku.com/articles/free-dyno-hours) and will go to sleep after 30 minutes of innactivity. The page is not frozen, please give the server a few seconds to start up. 
