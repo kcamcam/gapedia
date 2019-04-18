@@ -1,54 +1,73 @@
 <input id="accuracy-value" value="<%= @accuracy %>" hidden="true"/>
 <div class="container py-3">
-	<div class="row-fluid text-center">
+	<div class="row-fluid text-center main">
+  
 		<div class="col-12">
-	    	<h1 class="display-3">G<span id="emoji-calendar">-</span>Apedia</h1>
-            <h2>Integrity Meter </h2>
-    	</div>
-    	<br/>
-	    <div class="col-8 offset-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
-	    	<img class="img-fluid" src="https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Wikipedia-logo-v2.svg/1122px-Wikipedia-logo-v2.svg.png"/>
-	    </div>
-	    <div class="col-12">
-    		<span class="display-1">
-          <span class="odometer" id="odometer">00</span>
-          %
-        </span>
-    		<br/>
-	    	<span>
-	    		Has shown us the path to the truth
-	    		<span class="text-success" ><%= @vote.upvote %></span>
-		    		times
-    		</span>
-    		<br/>
-    		<span>
-    			He has gone full blown retard
-	    		<span class="text-danger"><%= @vote.downvote %></span>
-	    		times
-	    	</span>
-	    	<br/>
-    		<span>
-    			For a grand total of
-    			<span class="text-primary"><%= @total %></span>
-    			debates/arguments
-	    	</span>
-	    </div>
-	    <div class="col-12 pt-2 d-none d-sm-block">	    	
-	    	<a class="btn btn-lg btn-outline-success m-1" data-method="put" href="vote/1/upvote">Thanks G! 😃</a>
-	    	<a class="btn btn-lg btn-outline-danger m-1" data-method="put" href="vote/1/downvote">Fake News! 😡</a>
-	    </div>
-	    <div class="col-12 pt-2 d-block d-sm-none">	    	
-	    	<a class="btn btn-outline-success m-1" data-method="put" href="vote/1/upvote">Thanks G! 😃</a>
-	    	<a class="btn btn-outline-danger m-1" data-method="put" href="vote/1/downvote">Fake News! 😡</a>
-	    </div>
-	    <br/>
-	    <div class="col-12 text-right">
-	    	<small>
-	    		🛠 with ❤️ by <a href="https://1social.me/kcamel" target="_blank">kcamel</a>🐫
-	    	</small>
-	    </div>
-	</div>
+      <h1 class="display-3">G<span id="emoji-calendar">-</span>Apedia</h1>
+      <h2>Integrity Meter </h2>
+    </div>
+
+    <br/>
+
+    <div class="col-8 offset-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
+      <img class="img-fluid" src="https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Wikipedia-logo-v2.svg/1122px-Wikipedia-logo-v2.svg.png"/>
+    </div>
+
+    <div class="col-12">
+      <span class="display-1">
+        <span class="odometer" id="odometer">00</span>
+        %
+      </span>
+      <br/>
+      <span>
+        Has shown us the path to the truth
+        <span class="text-success" ><%= @vote.upvote %></span>
+          times
+      </span>
+      <br/>
+      <span>
+        He has gone full blown retard
+        <span class="text-danger"><%= @vote.downvote %></span>
+        times
+      </span>
+      <br/>
+      <span>
+        For a grand total of
+        <span class="text-primary"><%= @total %></span>
+        debates/arguments
+      </span>
+    </div>
+
+    <div class="col-12 pt-2 d-none d-sm-block">	    	
+      <a class="btn btn-lg btn-outline-success m-1" data-method="put" href="vote/1/upvote">Thanks G! 😃</a>
+      <a class="btn btn-lg btn-outline-danger m-1" data-method="put" href="vote/1/downvote">Fake News! 😡</a>
+    </div>
+
+    <div class="col-12 pt-2 d-block d-sm-none">	    	
+      <a class="btn btn-outline-success m-1" data-method="put" href="vote/1/upvote">Thanks G! 😃</a>
+      <a class="btn btn-outline-danger m-1" data-method="put" href="vote/1/downvote">Fake News! 😡</a>
+    </div>
+    
+    <br/>
+    <!-- ./ col -->  
+  </div>
+  <!-- ./ row -->
 </div>
+<!-- ./ container .main -->
+
+<div class="container py-3">
+  <div class="row-fluid">
+    <div class="col-12 text-right">
+      <small>
+        🛠 with ❤️ by <a href="https://kcamel.io" target="_blank">kcamel</a>🐫
+      </small>
+    </div>
+    <!-- ./ col -->  
+  </div>
+  <!-- ./ row -->
+</div>
+<!-- ./ container -->
+
 <script>
     $( document ).ready(function() {
       $accuracyValue = $('#accuracy-value').val()
