@@ -1,0 +1,77 @@
+# https://docs.rubocop.org/rubocop/
+
+# Default is 2
+Layout/IndentationWidth:
+  Description: 'Use 2 spaces for indentation.'
+  Width: 2
+
+# Default is true (var = if something else somethingelse)
+Style/ConditionalAssignment:
+  Enabled: false
+
+# Default is true
+Style/RedundantReturn:
+  Enabled: false
+
+# Default is true
+Style/RedundantSelf:
+  Enabled: false
+
+# Default is true
+Style/TrailingCommaInArguments:
+  Enabled: false
+
+# Default is true
+Style/TrailingCommaInHashLiteral:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+  EnforcedStyle: never
+
+# Default is 80
+Layout/LineLength:
+  Max: 120
+
+# Disable the check (http://wiki.c2.com/?AbcMetric)
+Metrics/AbcSize:
+  Enabled: false
+
+# Default is 25
+Metrics/BlockLength:
+  Max: 40
+
+# Default is 100
+Metrics/ClassLength:
+  Description: 'Avoid classes longer than 200 lines of code.'
+  Max: 200
+
+# Default is 6
+Metrics/CyclomaticComplexity:
+  Max: 10
+
+# Default is 50
+Metrics/MethodLength:
+  Max: 75
+
+# Default is 7
+Metrics/PerceivedComplexity:
+  Max: 10
+
+
+# Do not enforce documentation since people will put useless comments just to make the warning go away
+Style/Documentation:
+  Enabled: false
+
+# Warning popping in cases where this should not be applied
+Style/GuardClause:
+  Enabled: false
+
+# Underscores in numeric values should not be forced upon
+Style/NumericLiterals:
+  Enabled: false
+
+# Allow to omit the error class
+Style/RescueStandardError:
+  Enabled: false
+
